@@ -1,0 +1,15 @@
+.home-wrap{
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    height: 92vh;
+}
+
+.home-header-container{
+    display: flex;
+    height: 300px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+}

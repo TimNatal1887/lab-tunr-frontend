@@ -1,0 +1,10 @@
+.song-item-wrap{
+    border: 1px solid green;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table-row td {
+    text-align: center;
+    padding: 8px; /* Adjust padding as needed */
+}
