@@ -6,12 +6,14 @@
     align-items: center;
 }
 .song-details-wrapper{
-    border: 1px solid aqua;
+    border: 5px solid aqua;
+    padding: 10px;
     align-self: center;
     margin-top: 100px;
     height: 200px;
     width: 400px;
     font-size: 20px;
+    margin-bottom: 10px;
 }
 .song-details-wrapper * {
     margin-left: 10px;
@@ -35,5 +37,20 @@
     display: flex;
     justify-content: space-between;
     width: 700px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+
+.detail-button {
+    border: 1px solid gray;
+    border-radius: 10%;
+    padding: 10px;
+}
+
+.detail-button:hover{
+    background: gray;
+}
+
+.detail-link{
+    text-decoration: none;
+    color: black;
 }

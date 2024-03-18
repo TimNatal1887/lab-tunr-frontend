@@ -1,12 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import "../styles/SongDetails.css"
-import { useParams } from 'react-router-dom';
+import { useParams,Link, useNavigate } from 'react-router-dom';
 
 const API = import.meta.env.VITE_API_URL;
 
 const SongDetails = () => {
   const [song, setSong] = useState({})
   const { id } = useParams()
+  const navigate = useNavigate()
+
+  const deleteSong = () => {
+    fetch(`${API}/songs/${id}`, {
+      method: 'DELETE',
+    })
+      .then(() => navigate(`/songs`))
+      .catch((error) => console.error(error))
+  }
   
   useEffect(()=>{
       fetch(`${API}/songs/${id}`)
@@ -25,9 +34,13 @@ const SongDetails = () => {
         <p className='song-runtime-data'>Time: {song.time}</p>
         </div>
         <div className='detail-button-wrapper'>
-            <p>Back</p>
-            <p>Edit Song</p>
-            <p>Delete Song</p>
+            <Link to="/songs" className='detail-link'>
+                <p className='detail-button return-home'>Back</p>
+            </Link>
+            <Link to={`/songs/edit/${song.id}`} className='detail-link'>
+            <p className='detail-button edit'>Edit Song</p>
+            </Link>
+            <p className='detail-button delete' onClick={deleteSong}>Delete Song</p>
         </div>
     </div>
   )

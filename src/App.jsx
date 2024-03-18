@@ -4,6 +4,8 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import Songs from "./components/Songs";
 import SongDetails from "./components/SongDetails";
+import SongNewForm from "./components/SongNewForm";
+import SongEditForm from "./components/SongEditForm";
 
 const App = () => {
   return <div className="page-wrap">
@@ -15,6 +17,8 @@ const App = () => {
           <Route path="songs">
             <Route index element={<Songs />}/>
             <Route path="song/:id" element={<SongDetails />}/>
+            <Route path="new" element={<SongNewForm />}/>
+            <Route path="edit/:id" element={<SongEditForm />} />
           </Route>
         </Route>
       </Routes>
