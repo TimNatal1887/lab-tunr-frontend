@@ -67,7 +67,7 @@ function SongNewForm() {
           type="text"
           name="album"
           value={song.album}
-          placeholder="educational, inspirational, ..."
+          placeholder="Album or Artist for single"
           onChange={handleTextChange}
         />
         <label htmlFor="is_favorite">Favorite:</label>

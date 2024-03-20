@@ -1,0 +1,36 @@
+.playlists-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.playlist-list{
+    list-style: none;
+}
+
+.playlist-item{
+    border: 1px solid gray;
+    margin: 10px;
+    color: black;
+    padding: 10px;
+}
+
+.playlist-item-link{
+    text-decoration: none;
+    color: black;
+}
+
+.playlist-item:hover{
+    color: purple;
+}
+
+.playlist-item-link:hover{
+    color: purple;
+}
+.playlist-item button{
+    margin-left: 10px;
+}
+.playlist-name{
+    margin-bottom: 15px;
+}

@@ -22,7 +22,7 @@ const SongDetails = () => {
       .then((response)=>response.json())
       .then((responseJSON)=> setSong(responseJSON))
       .catch((error)=> console.error(error))
-    },[])
+    },[id])
     
   if(Object.keys(song).length === 0) return null
   return (
@@ -37,7 +37,7 @@ const SongDetails = () => {
             <Link to="/songs" className='detail-link'>
                 <p className='detail-button return-home'>Back</p>
             </Link>
-            <Link to={`/songs/edit/${song.id}`} className='detail-link'>
+            <Link to={`/songs/${song.id}/edit`} className='detail-link'>
             <p className='detail-button edit'>Edit Song</p>
             </Link>
             <p className='detail-button delete' onClick={deleteSong}>Delete Song</p>

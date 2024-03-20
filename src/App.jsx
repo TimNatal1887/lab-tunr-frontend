@@ -6,6 +6,11 @@ import Songs from "./components/Songs";
 import SongDetails from "./components/SongDetails";
 import SongNewForm from "./components/SongNewForm";
 import SongEditForm from "./components/SongEditForm";
+import Playlists from "./components/Playlists.jsx";
+import PlaylistDetails from "./components/PlaylistDetails.jsx";
+import AddToPlaylistForm from "./components/AddToPlaylistForm.jsx";
+import PlaylistNewForm from "./components/PlayListNewForm.jsx";
+import PlaylistUpdateForm from "./components/PlaylistUpdateForm.jsx";
 
 const App = () => {
   return <div className="page-wrap">
@@ -18,7 +23,14 @@ const App = () => {
             <Route index element={<Songs />}/>
             <Route path="song/:id" element={<SongDetails />}/>
             <Route path="new" element={<SongNewForm />}/>
-            <Route path="edit/:id" element={<SongEditForm />} />
+            <Route path=":id/edit" element={<SongEditForm />} />
+          </Route>
+          <Route path="playlists">
+            <Route index element={<Playlists />} />
+            <Route path="new" element={<PlaylistNewForm />}/>
+            <Route path=":id/add" element={<AddToPlaylistForm />} />
+            <Route path=":id/edit" element={<PlaylistUpdateForm />}/>
+            <Route path=":id" element={<PlaylistDetails/>}/>
           </Route>
         </Route>
       </Routes>

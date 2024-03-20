@@ -19,18 +19,18 @@ function SongEditForm() {
     .then((response)=>response.json())
     .then((responseJSON)=>setSong(responseJSON))
     .catch((error)=>console.error(error))
-  },[])
+  },[id])
 
-  const addSong = () => {
-    fetch(`${API}/songs`, {
-      method: "POST",
+  const updateSong = () => {
+    fetch(`${API}/songs/${id}`, {
+      method: "PUT",
       body: JSON.stringify(song),
       headers: {
         "Content-Type": "application/json",
       },
     })
       .then(() => {
-        navigate(`/songs`);
+        navigate(`/songs/song/${id}`);
       })
       .catch((error) => console.error("catch", error));
   };
@@ -45,12 +45,11 @@ function SongEditForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addSong();
+    updateSong();
   };
 
   return (
     <div className="New">
-      {console.log(song)}
       <form onSubmit={handleSubmit} className="form-wrap">
         <label htmlFor="name">Song Name:</label>
         <input

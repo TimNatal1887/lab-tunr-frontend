@@ -1,8 +1,10 @@
 import React from 'react';
 import "../styles/Song.css";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import AddToPlaylist from './AddToPlaylistForm';
 
 const Song = ({ song }) => {
+  const navigate = useNavigate()
   return (
     <tr className='table-row'>
       <td className='fav'>{song.is_favorite ? "⭐️" : ""}</td>
@@ -13,6 +15,9 @@ const Song = ({ song }) => {
         </td>
       <td className='song-artist'>{song.artist}</td>
       <td className='song-time'>{song.time}</td>
+      <td>
+        <button onClick={()=>navigate(`/playlists/${song.id}/add`)}>Add to Playlist</button>
+      </td>
     </tr>
   );
 };

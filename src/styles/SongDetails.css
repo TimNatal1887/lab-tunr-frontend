@@ -1,5 +1,5 @@
 .song-wrapper{
-    border: 10px solid green;
+    /* border: 10px solid green; */
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -7,11 +7,11 @@
 }
 .song-details-wrapper{
     border: 5px solid aqua;
-    padding: 10px;
+    padding: 20px;
     align-self: center;
     margin-top: 100px;
-    height: 200px;
-    width: 400px;
+    min-height: 200px;
+    min-width: 400px;
     font-size: 20px;
     margin-bottom: 10px;
 }

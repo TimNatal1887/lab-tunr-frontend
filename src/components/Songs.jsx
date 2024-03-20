@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "../styles/Songs.css";
 import Song from './Song';
 import { Link } from 'react-router-dom';
+import AddToPlaylist from './AddToPlaylistForm';
 
 const API = import.meta.env.VITE_API_URL;
 

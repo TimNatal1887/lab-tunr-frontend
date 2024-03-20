@@ -1,0 +1,39 @@
+.playlist-details {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .playlist-details h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .song-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .playlist-songlist {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+  }
+  
+  .playlist-songlist p {
+    margin: 5px 0;
+  }
+  
+  .playlist-songlist p:first-child {
+    font-weight: bold;
+  }
+  
+  .playlist-songlist p:nth-child(2) {
+    color: #555;
+  }
+  
+  .playlist-songlist p:last-child {
+    font-style: italic;
+  }
